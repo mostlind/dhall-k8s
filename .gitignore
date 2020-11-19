@@ -1,0 +1,8 @@
+generated/
+configmap/
+apps/
+environments/
+generate-environment-config/
+feature.dhall
+local.dhall
+prod.dhall
