@@ -6,3 +6,4 @@ generate-environment-config/
 feature.dhall
 local.dhall
 prod.dhall
+project.dhall
