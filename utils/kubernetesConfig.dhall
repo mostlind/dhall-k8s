@@ -1,20 +1,20 @@
-let service = ./resources/service.dhall
+let service = ../resources/service.dhall
 
-let deployment = ./resources/deployment.dhall
+let deployment = ../resources/deployment.dhall
 
-let kubernetes = ./imports/kubernetes.dhall
+let kubernetes = ../imports/kubernetes.dhall
 
-let App = ./schemas/App.dhall
+let App = ../schemas/App.dhall
 
-let concatMap = ./imports/concatMap.dhall
+let concatMap = ../imports/concatMap.dhall
 
-let map = ./imports/map.dhall
+let map = ../imports/map.dhall
 
-let Environment = ./types/Environment.dhall
+let Environment = ../types/Environment.dhall
 
-let EnvironmentConfig = ./types/EnvironmentConfig.dhall
+let EnvironmentConfig = ../types/EnvironmentConfig.dhall
 
-let apply = ./utils/apply.dhall
+let apply = ../utils/apply.dhall
 
 let items =
       λ(environment : Environment) →
@@ -31,7 +31,7 @@ let items =
               map App.Type kubernetes.Deployment.Type deployment appConfigs
 
         let ingress =
-              ./resources/ingress.dhall
+              ../resources/ingress.dhall
                 (environment.config.prefix ++ "ingress")
                 appConfigs
 
