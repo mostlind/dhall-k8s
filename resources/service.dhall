@@ -2,7 +2,7 @@ let kubernetes = ../imports/kubernetes.dhall
 
 let App = ../schemas/App.dhall
 
-let servicePort = λ(port : Natural) → kubernetes.ServicePort::{ port }
+let servicePort = λ(port : Integer) → kubernetes.ServicePort::{ port }
 
 let service =
       λ(app : App.Type) →

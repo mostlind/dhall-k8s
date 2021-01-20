@@ -9,7 +9,7 @@ let Map = ../imports/mapType.dhall
 let Resources = ../types/Resources.dhall
 
 let containerPort =
-      λ(port : Natural) → kubernetes.ContainerPort::{ containerPort = port }
+      λ(port : Integer) → kubernetes.ContainerPort::{ containerPort = port }
 
 let resourcesToMap = λ(resources : Resources) → toMap resources
 

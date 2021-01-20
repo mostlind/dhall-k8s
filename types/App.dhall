@@ -8,5 +8,5 @@ in  { name : Text
     , requests : Resources
     , limits : Optional Resources
     , envVars : List kubernetes.EnvVar.Type
-    , port : Natural
+    , port : Integer
     }
