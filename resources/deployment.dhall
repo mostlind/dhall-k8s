@@ -13,7 +13,7 @@ let deployment =
             , matchLabels = Some (toMap { app = app.name })
             }
           , template = kubernetes.PodTemplateSpec::{
-            , metadata = kubernetes.ObjectMeta::{
+            , metadata = Some kubernetes.ObjectMeta::{
               , labels = Some (toMap { app = app.name })
               }
             , spec = Some kubernetes.PodSpec::{ containers = [ container app ] }
